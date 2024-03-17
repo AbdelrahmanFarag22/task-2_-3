@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Screen5 extends StatefulWidget {
   const Screen5({super.key});
@@ -22,14 +20,19 @@ class _Screen5State extends State<Screen5> {
             ),
             SizedBox(
               width: double.infinity,
-              height: 50,
+              height: 80,
               child: ListView.builder(
                 itemBuilder: (context, index) {
                   return const Row(
                     children: [
-                      CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/image1.jpeg'),
+                      Column(
+                        children: [
+                          CircleAvatar(
+                            backgroundImage:
+                                AssetImage('assets/images/image1.jpeg'),
+                          ),
+                          Text('abdo',style: TextStyle(fontSize: 16,),)
+                        ],
                       ),
                       SizedBox(
                         width: 10,
@@ -45,16 +48,24 @@ class _Screen5State extends State<Screen5> {
               height: 20,
             ),
             SizedBox(
-              width: 100,
+              width: double.infinity,
               height: 900,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) {
                   return const Column(
                     children: [
-                      CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/image1.jpeg'),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundImage:
+                                AssetImage('assets/images/image1.jpeg'),
+                          ),
+                          SizedBox(width: 5,),
+                          Expanded(child: Text('Welcome to flutter',),),
+                          Text('11.30 pm'),
+                          
+                        ],
                       ),
                       SizedBox(
                         height: 10,
